@@ -1,0 +1,32 @@
+<% if notice %>
+<p id="notice"><%= notice %></p>
+<% end %>
+<br>
+<h1>Railsはじめてマート</h1>
+<h2>　　　　　　Railsで楽しくお買い物♪</h2>
+<br>
+<%= link_to 'カートを表示', cart_item_path %>
+<br>
+<br>
+<table>
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+	<% @items.each do |item| %>
+	<tr>
+		<td text-align:center;>
+			<img height="80" src="<%=h item.image_id %>"/>
+		</td>
+		<td>
+			<p><font size="5">商品名：<%= item.name %></font></p>
+			商品説明：<%= item.introduction %><br></font></p>
+			<p><font size="4">価格：<%= item.taxfree %>円</font></p>
+		</td>
+		<td>
+			<%= button_to 'カートに入れる', line_items_path(item_id: item) %>
+		</td>
+	</tr>
+	<% end %>
+</table>

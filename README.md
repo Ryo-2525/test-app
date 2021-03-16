@@ -5,6 +5,7 @@
      /_/   \_\_/\_/  |____/   \____|_|\___/ \__,_|\__,_|  /_/ 
  ----------------------------------------------------------------- 
 
+rails g model product name price:integer
 
 Hi there! Welcome to AWS Cloud9!
 

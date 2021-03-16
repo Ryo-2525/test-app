@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @item.name %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @item.image_id %>
+</p>
+
+<p>
+  <strong>Introduction:</strong>
+  <%= @item.introduction %>
+</p>
+
+<p>
+  <strong>Taxfree:</strong>
+  <%= @item.taxfree %>
+</p>
+
+<%= link_to 'Edit', edit_item_path(@item) %> |
+<%= link_to 'Back', items_path %>
