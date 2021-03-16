@@ -142,8 +142,16 @@ div {
   }
 }
 #notice {
-  color: green;
+ padding:12px;
+ font-weight:850;
+ color:#262626;
+ background:#CCFFCC;
+ border:2px solid #00CC00;
+ width: 500px;
+ font-size: 18px;
 }
+
+
 .field_with_errors {
   padding: 2px;
   background-color: red;

@@ -13,12 +13,16 @@
 		<th></th>
 		<th>商品名</th>
 		<th>価格</th>
+		<th>数量</th>
 	</tr>
 		<% @cart.line_items.each do |item| %>
 		<tr>
 			<td text-align:center;><img height="80" src="<%=h item.good.image_url %>"/></td>
 			<td text-align:center;><font size="4"><%= item.good.title %></font></td>
 			<td text-align:center;><font size="4"><%= (item.good.price).to_i %>円</font></td>
+			<td text-align:center;><font size="4"><%= item.quantity %></font></td>
 		</tr>
 		<% end %>
 </table>
+<br>
+<%= button_to 'カートを空にする', @cart, method: :delete, data: {confirm: 'カートを空にして本当によろしいですか？'}, class: 'fbtn' %>
